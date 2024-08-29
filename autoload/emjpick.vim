@@ -7,8 +7,11 @@ fu! s:format_item(item) abort
 endfu
 
 fu! s:insert_callback(item, mode) abort
-	let char = a:item['char']
+	if type(a:item) == type(v:null)
+		return
+	endif
 
+	let char = a:item['char']
 	if a:mode == 'n'
 		call feedkeys('i' . char . "\<Esc>l")
 	endif
