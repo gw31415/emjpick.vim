@@ -1,4 +1,4 @@
-#!/usr/bin/env -S deno run -A
+#!/usr/bin/env -S deno run --allow-write
 
 import emoji from "npm:emoji.json" with { type: "json" };
 
@@ -15,11 +15,11 @@ if (!import.meta.main) {
 	throw "This module is meant to be run as a script.";
 }
 
-const em = (emoji as Emoji[])
+const chars = (emoji as Emoji[])
 	.filter((e) => !e.codes.includes(" "))
 	.map(({ name, char }) => ({
 		name,
 		char,
 	}));
 
-Deno.writeTextFileSync("chars.json", JSON.stringify(em));
+Deno.writeTextFileSync("chars.json", JSON.stringify(chars));
