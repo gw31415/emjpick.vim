@@ -1,9 +1,9 @@
-let s:emj_data = json_decode(readfile(expand('<sfile>:p:h:h') . '/emoji.json'))
+let s:emj_data = json_decode(readfile(expand('<sfile>:p:h:h') . '/chars.json'))
 
 fu! s:format_item(item) abort
 	let char = a:item['char']
-	let cldr = a:item['cldr']
-	return char . "\t" . cldr
+	let name = a:item['name']
+	return char . "\t" . name
 endfu
 
 fu! s:insert_callback(item, mode) abort

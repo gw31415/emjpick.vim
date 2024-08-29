@@ -1,2 +1,2 @@
 [tools]
-jq = "latest"
+deno = "latest"

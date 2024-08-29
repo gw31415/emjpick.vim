@@ -1,0 +1,15 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:emoji.json": "npm:emoji.json@15.1.0"
+    },
+    "npm": {
+      "emoji.json@15.1.0": {
+        "integrity": "sha512-GqE6SCE8rSc5Gyd+oh6s/pkoNSW/pULdgJTB6jd/sM87FWA/a1nmvFMdWBjvSA5vdomzDvZgy584KNgzdYJwDA==",
+        "dependencies": {}
+      }
+    }
+  },
+  "remote": {}
+}
