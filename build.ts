@@ -16,10 +16,7 @@ if (!import.meta.main) {
 }
 
 const chars = (emoji as Emoji[])
-	.filter((e) => !e.codes.includes(" "))
-	.map(({ name, char }) => ({
-		name,
-		char,
-	}));
+	.filter((e) => !e.codes.includes(" ")) // Ignore multi-char emojis for Vim
+	.map(({ name, char }) => ({ name, char }));
 
 Deno.writeTextFileSync("chars.json", JSON.stringify(chars));
